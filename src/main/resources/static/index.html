@@ -12,12 +12,19 @@
             <tr>
                 <td colspan="2">
                     <button type="button" onclick="connect();">Connect</button>
+                    <button type="button" onclick="disconnect();">Disconnect</button>
                 </td>
             </tr>
             <tr>
                 <td>
                     <input type="text" size="51" id="msg" placeholder="Message" />
                     <button type="button" onclick="send();">Send</button>
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="messageArea" style="border: 1px solid #000; height: 200px; overflow-y: scroll;"></div>
                 </td>
             </tr>
         </table>
