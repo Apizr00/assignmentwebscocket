@@ -1,15 +1,20 @@
 var ws;
 
 function connect() {
+
+    alert("Connected to WebSocket");
     var host = document.location.host;
     ws = new WebSocket("ws://" + host + "/chat");
     ws.onmessage = onMessage;
+    
 
 }
 
 function disconnect() {
 
     if (ws && ws.readyState !== WebSocket.CLOSED) {
+    
+    alert("Disconnect from WebSocket");
       
     // Send a close frame to the server (optional, but recommended for a graceful shutdown)
     ws.send(JSON.stringify({ type: "close" }));

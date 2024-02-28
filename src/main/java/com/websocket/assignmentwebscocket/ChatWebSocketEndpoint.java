@@ -27,7 +27,7 @@ public class ChatWebSocketEndpoint {
 
         System.out.println("Message from " + session.getId() + ": " + message);
         try {
-            session.getBasicRemote().sendText("Echo: " + message);
+            session.getBasicRemote().sendText(message);
         } catch (IOException e) {
             e.printStackTrace();
         }
